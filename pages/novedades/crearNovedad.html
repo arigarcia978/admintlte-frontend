@@ -152,8 +152,8 @@
                     </a>
                     <ul class="treeview-menu">
                         <!-- $%# Reemplazar URL de cada operación -->
-                        <li><a href="crearDestino.html"><i class="fa fa-circle-o"></i>Crear Destino</a></li>
-                        <li><a href="editarDestino.html"><i class="fa fa-circle-o"></i>Modificar Destino</a></li>
+                        <li><a href="../destinos/crearDestino.html"><i class="fa fa-circle-o"></i>Crear Destino</a></li>
+                        <li><a href="../destinos/editarDestino.html"><i class="fa fa-circle-o"></i>Modificar Destino</a></li>
                         <li><a href="index2.html"><i class="fa fa-circle-o"></i>Eliminar Destino</a></li>
                     </ul>
                 </li>
@@ -168,8 +168,8 @@
                     </a>
                     <ul class="treeview-menu">
                         <!-- $%# Reemplazar URL de cada operación -->
-                        <li><a href="../novedades/crearNovedad.html"><i class="fa fa-circle-o"></i>Crear Novedad</a></li>
-                        <li><a href="../novedades/editarNovedad.html"><i class="fa fa-circle-o"></i>Modificar Novedad</a></li>
+                        <li><a href="crearNovedad.html"><i class="fa fa-circle-o"></i>Crear Novedad</a></li>
+                        <li><a href="editarNovedad.html"><i class="fa fa-circle-o"></i>Modificar Novedad</a></li>
                         <li><a href="index2.html"><i class="fa fa-circle-o"></i>Eliminar Novedad</a></li>
                     </ul>
                 </li>
@@ -189,7 +189,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Gestionar destinos
+                Gestionar novedades
             </h1>
         </section>
         <!-- Main content -->
@@ -201,47 +201,54 @@
                     <!-- general form elements -->
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Editar destino</h3>
+                            <h3 class="box-title">Registrar una Novedad</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
                         <form role="form">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label>Lugar al que pertenece</label>
+                                    <label>Seleccione el Lugar</label>
                                     <select class="form-control" disabled>
                                         <option>UTN - FRT</option>
                                         <option>Shopping El Portal</option>
                                         <option>Teatro Mercedes Sosa</option>
                                     </select>
                                 </div>
+                                <!-- Date -->
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Nombre</label>
-                                    <input type="textarea" class="form-control" ng-model="Destino.nombre" placeholder="Ingrese el nombre">
+                                    <label>Fecha:</label>
+
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" ng-model="novedad.fecha">
+                                    </div>
+                                    <!-- /.input group -->
                                 </div>
+                                <!-- /.form group -->
                                 <div class="form-group">
                                     <label>Descripción</label>
                                     <textarea class="form-control" rows="3" placeholder="Descripción..."></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Coordenada X</label>
-                                    <input type="text" class="form-control" ng-model="Destino.latitud" placeholder="Ingrese la coordenada X">
+                                    <label for="exampleInputFile">Imagen</label>
+                                    <input type="file" ng-model="Lugar.imagen">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Coordenada Y</label>
-                                    <input type="text" class="form-control" ng-model="Destino.longitud" placeholder="Ingrese la coordenada Y">
-                                </div>
-                            </div>
-                            <!-- /.box-body -->
+                                <!-- /.box-body -->
 
-                            <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                            </div>
+
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </div>
                         </form>
+
                     </div>
                 </div>
-                <!-- /.box -->
+
             </div>
+            <!--/.col (left) -->
             <!-- /.row -->
         </section>
         <!-- /.content -->

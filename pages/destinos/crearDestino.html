@@ -45,7 +45,7 @@
 <div class="wrapper">
     <header class="main-header">
         <!-- Logo -->
-        <a href="index.html" class="logo">
+        <a href="../../index.html" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <!-- $%# Agregar logo de aplicación para que se muestre cuando minimizo el menú de la izquierda -->
             <span class="logo-mini">AAA</b></span>
@@ -137,7 +137,7 @@
                 <li class="header">Configuración</li>
                 <!-- Menú Estadísticas -->
                 <li>
-                    <a href="index.html">
+                    <a href="../../index.html">
                         <i class="fa fa-th"></i><span>Estadísticas</span>
                     </a>
                 </li>
@@ -152,8 +152,8 @@
                     </a>
                     <ul class="treeview-menu">
                         <!-- $%# Reemplazar URL de cada operación -->
-                        <li><a href="index2.html"><i class="fa fa-circle-o"></i>Crear Destino</a></li>
-                        <li><a href="index2.html"><i class="fa fa-circle-o"></i>Modificar Destino</a></li>
+                        <li><a href="crearDestino.html"><i class="fa fa-circle-o"></i>Crear Destino</a></li>
+                        <li><a href="editarDestino.html"><i class="fa fa-circle-o"></i>Modificar Destino</a></li>
                         <li><a href="index2.html"><i class="fa fa-circle-o"></i>Eliminar Destino</a></li>
                     </ul>
                 </li>
@@ -168,14 +168,14 @@
                     </a>
                     <ul class="treeview-menu">
                         <!-- $%# Reemplazar URL de cada operación -->
-                        <li><a href="index2.html"><i class="fa fa-circle-o"></i>Crear Novedad</a></li>
-                        <li><a href="index2.html"><i class="fa fa-circle-o"></i>Modificar Novedad</a></li>
+                        <li><a href="../novedades/crearNovedad.html"><i class="fa fa-circle-o"></i>Crear Novedad</a></li>
+                        <li><a href="../novedades/editarNovedad.html"><i class="fa fa-circle-o"></i>Modificar Novedad</a></li>
                         <li><a href="index2.html"><i class="fa fa-circle-o"></i>Eliminar Novedad</a></li>
                     </ul>
                 </li>
                 <!-- Menú EN VIVO -->
                 <li>
-                    <a href="index.html">
+                    <a href="../../index.html">
                         <i class="fa fa-th"></i><span>En Vivo</span>
                     </a>
                 </li>
@@ -189,53 +189,60 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Crear destino
+                Gestionar destinos
             </h1>
         </section>
         <!-- Main content -->
         <section class="content">
+            <!-- Main content -->
             <div class="row">
                 <!-- left column -->
                 <div class="col-md-6">
                     <!-- general form elements -->
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Registrar un lugar</h3>
+                            <h3 class="box-title">Registrar un destino</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
                         <form role="form">
                             <div class="box-body">
                                 <div class="form-group">
+                                    <label>Lugar al que pertenece</label>
+                                    <select class="form-control" disabled>
+                                        <option>UTN - FRT</option>
+                                        <option>Shopping El Portal</option>
+                                        <option>Teatro Mercedes Sosa</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label for="exampleInputEmail1">Nombre</label>
-                                    <input type="text" class="form-control" ng-model="Lugar.nombre" placeholder="Ingrese el nombre">
+                                    <input type="textarea" class="form-control" ng-model="Destino.nombre" placeholder="Ingrese el nombre">
                                 </div>
                                 <div class="form-group">
                                     <label>Descripción</label>
                                     <textarea class="form-control" rows="3" placeholder="Descripción..."></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Latitud</label>
-                                    <input type="text" class="form-control" ng-model="Lugar.latitud" placeholder="Ingrese la latitud">
+                                    <label for="exampleInputPassword1">Coordenada X</label>
+                                    <input type="text" class="form-control" ng-model="Destino.latitud" placeholder="Ingrese la coordenada X">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Longitud</label>
-                                    <input type="text" class="form-control" ng-model="Lugar.longitud" placeholder="Ingrese la longitud">
+                                    <label for="exampleInputPassword1">Coordenada Y</label>
+                                    <input type="text" class="form-control" ng-model="Destino.longitud" placeholder="Ingrese la coordenada Y">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputFile">Imagen</label>
-                                    <input type="file" ng-model="Lugar.imagen">
-                                </div>
-                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box-body -->
 
-                                <div class="box-footer">
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
-                                </div>
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
                         </form>
                     </div>
-                    <!-- /.box -->
                 </div>
+                <!-- /.box -->
             </div>
+            <!-- /.row -->
         </section>
         <!-- /.content -->
     </div>
